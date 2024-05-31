@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Yash Bhardwaj</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<link rel="stylesheet" href="css/aos.css">
+
+	<link rel="stylesheet" href="css/ionicons.min.css">
+
+	<link rel="stylesheet" href="css/flaticon.css">
+	<link rel="stylesheet" href="css/icomoon.css">
+	<link rel="stylesheet" href="css/style.css">
+
+
+
+	<style>
+		/*======================================
+//--//-->   ABOUT
+======================================*/
+
+		.about-mf .box-shadow-full {
+			padding-top: 4rem;
+			padding-bottom: 4rem;
+		}
+
+		.about-mf .about-img {
+			margin-bottom: 2rem;
+		}
+
+		.about-mf .about-img img {
+			margin-left: 10px;
+		}
+
+
+		.skill-mf .progress {
+			/* background-color: #cde1f8; */
+			margin: .5rem 0 1.2rem 0;
+			border-radius: 0;
+			height: .7rem;
+		}
+
+		.skill-mf .progress .progress-bar {
+			height: .7rem;
+			background-color: #ffbd39;
+		}
+
+
+		/* Animation styles */
+		#typing-animation {
+			position: relative;
+			font-size: 30px;
+			font-weight: bold;
+			color: rgb(255, 255, 255);
+			overflow: hidden;
+			white-space: nowrap;
+			animation: typing 3s steps(20, end) infinite;
+		}
+
+		#typing-animation:before {
+			content: "";
+			/* position: absolute; */
+			top: 0;
+			left: 0;
+			width: 0;
+			height: 100%;
+			background-color: #ccc;
+			animation: typing-cursor 0.5s ease-in-out infinite;
+		}
+
+		@keyframes typing {
+			from {
+				width: 0;
+			}
+
+			to {
+				width: 100%;
+			}
+		}
+
+		@keyframes typing-cursor {
+			from {
+				width: 5px;
+			}
+
+			to {
+				width: 0;
+			}
+		}
+
+
+		/* project image zoom effect */
+
+		.zoom-effect {
+			overflow: hidden;
+			transition: transform 0.3s ease-out;
+		}
+
+		.zoom-effect:hover {
+			transform: scale(1.1);
+		}
+	</style>
+
+
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+
+	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+		<div class="container">
+			<a class="navbar-brand" href="index.html">Yash Bhardwaj</a>
+			<button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse"
+				data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="oi oi-menu"></span> Menu
+			</button>
+
+			<div class="collapse navbar-collapse" id="ftco-nav">
+				<ul class="navbar-nav nav ml-auto">
+					<li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+					<li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+					<li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+					<li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+					<li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<section id="home-section" class="hero">
+		<div class="home-slider  owl-carousel">
+			<div class="slider-item ">
+				<div class="overlay"></div>
+				<div class="container">
+					<div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end"
+						data-scrollax-parent="true">
+						<div class="one-third js-fullheight order-md-last img"
+							style="background-image:url(images/yashnobg.png);">
+							<div class="overlay"></div>
+						</div>
+						<div class="one-forth d-flex  align-items-center ftco-animate"
+							data-scrollax=" properties: { translateY: '70%' }">
+							<div class="text">
+								<span class="subheading">Hello!</span>
+								<h1 class="mb-4 mt-3">I'm <span>Yash Bhardwaj</span></h1>
+
+								<!-- Element to contain animated typing -->
+								<span id="typing-animation"></span>
+
+								<script>
+
+									// Initialize the typing animation
+									const typingAnimationElement = document.getElementById('typing-animation');
+
+									// Create an array of typing text
+									const typingTexts = [
+										'Android Developer     ',
+										'Full stack Developer  ',
+										'Data Analyst          ',
+									];
+
+									// Create a function to display the typing animation for a given text
+									function playTypingAnimation(text) {
+										// Loop through each character and add it to the element
+										for (let i = 0; i < text.length; i++) {
+											setTimeout(() => {
+												typingAnimationElement.textContent += text[i];
+											}, i * 200); // Increase the delay to slow down the typing animation
+										}
+
+										// Once the animation is complete, reset the text and start over
+										setTimeout(() => {
+											typingAnimationElement.textContent = '';
+											playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+										}, text.length * 200);
+									}
+
+									// Start the typing animation loop
+									playTypingAnimation(typingTexts[0]);
+
+								</script>
+
+								<br>
+								<br>
+								<!-- <h2>Android Developer</h2> -->
+								<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+								<!-- <br> -->
+								<p><a href="https://github.com/yashbhardwaj11/"
+										class="btn btn-primary py-3 px-4">Github</a>
+									<a href="https://linkedin.com/in/yash-bhardwaj-07"
+										class="btn btn-white btn-outline-white py-3 px-4">Linkedin</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+		<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+					<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+										<div class="about-img">
+											<img src="images/about.jpg" class="img-fluid rounded b-shadow-a" alt="">
+										</div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+										<div class="about-info">
+											<p><span class="title-s">Name: </span> <span>Yash Bhardwaj</span></p>
+											<p><span class="title-s">Job Role: </span> <span>Android Developer</span>
+											</p>
+											<p><span class="title-s">Experience: </span> <span>1 Years 5 Months</span>
+											</p>
+											<p><span class="title-s">Address: </span> <span>New Delhi, India</span></p>
+										</div>
+									</div>
+								</div>
+
+								<div class="skill-mf">
+									<p class="title-s">Skills</p>
+									<span>Programming Languages : </span> <span class="pull-right">C++ || Kotlin || Javascript || Python || Java</span>
+									
+									<p class="title-s"></p>
+									<span>Frameworks : </span> <span class="pull-right">React.js || Express.js || Node.js || Next.js || Redux Toolkit || Jetpack Compose
+										</span>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+
+								<p>Hello! I'm Yash Bhardwaj, a passionate and versatile Software Developer with a strong
+									focus on Android development, web development, and data analysis. With a solid
+									educational foundation in Information Technology from Guru Gobind Singh Indraprastha
+									University and hands-on experience through various internships, I have honed my
+									skills to deliver high-quality, user-centric applications and insightful data
+									analyses.</p>
+								<ul style="display: flexbox">
+									<li><a href="/android.html" style="color: red;">Android Developer portfolio</a></li>
+									<li><a href="/web.html" style="color: red;">Web Developer portfolio</a></li>
+									<li><a href="/dataAnalyst.html" style="color: red;">Data Analyst portfolio</a></li>
+								</ul>
+								
+								<!-- <ul class="about-info mt-4 px-md-0 px-2"> -->
+								<!-- <li class="d-flex"><span>Profile:</span> <span>Android Developer</span> -->
+								<!-- </li> -->
+								<!-- <li class="d-flex"><span>Domain:</span> <span>Retail, Ecommerce, BFSI &amp; Digital Marketing</span></li> -->
+								<!-- <li class="d-flex"><span>Education:</span> <span>Bachelor of Engineering</span></li> -->
+								<!-- <li class="d-flex"><span>Language:</span> <span>English, Hindi</span></li> -->
+								<!-- <li class="d-flex"><span>BI Tools:</span> <span>Microsoft Power BI, Looker &amp;Tableau</span></li> -->
+								<!-- <li class="d-flex"><span>Other Skills:</span> <span>Cloud, PySpark, Excel, Git,
+											JIRA, Google Analytics &amp; SEO</span></li>
+									<li class="d-flex"><span>Interest:</span> <span>Traveling, Travel Photography,
+											Teaching</span></li> -->
+
+								<!-- </ul> -->
+							</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<span class="number" data-number="30">0</span> <span>+</span>
+									<span>&nbsp; Projects completed</span>
+								</p>
+								<p><a href="https://www.linkedin.com/in/yash-bhardwaj-07/" target="_blank"
+										class="btn btn-primary py-3 px-3">LinkedIn</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+
+	<section class="ftco-section ftco-no-pb" id="resume-section">
+		<div class="container">
+			<div class="row justify-content-center pb-5">
+				<div class="col-md-10 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Resume</h1>
+					<h2 class="mb-4">Resume</h2>
+					<p>Android Developer with hands-on experience in creating high-performance, user-centric
+						applications. Proficient in Java, Kotlin, and Firebase, I excel in end-to-end development,
+						real-time updates, and integrating advanced features like machine learning. Committed to
+						optimizing performance and enhancing user experience.</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<h1 class="big-4">Experience</h1>
+				<div class="underline"></div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-12">
+					<div class="resume-wrap ftco-animate">
+						<div class="experience-wrap">
+							<span class="date">Nov 2023 - Mar 2024</span>
+							<h2>SDE Intern (Android) at Cars Karkhana</h2>
+							<p>
+								A dynamic platform specializing in the buying and selling of vehicles, streamlining the process for users with innovative solutions and user-friendly features.
+								<ul>
+									<li>Conceptualized, Designed, and Deployed: Solely led the end-to-end development of a Cars Inspection App.</li>
+									<li>User-Centric Interface: Engineered an intuitive design, prioritizing efficiency for streamlined inspections.</li>
+									<li>Real-time Updates and Offline Functionality: Implemented features for seamless user experience.</li>
+									<li>Performance Optimization: Ensured swift loading times and minimal resource usage.</li>
+								</ul>
+							</p>
+						</div>
+						<div class="experience-wrap">
+							<span class="date">May 2023 - Oct 2023</span>
+							<h2>SDE Intern (Android) at Glazonoid Automates</h2>
+							<p>
+								Glazonoid, India's largest smart home decor manufacturer, specializes in smart Android and LED mirrors. Founded in 2018, it has branches nationwide, pushing technology limits in everyday products.
+								<ul>
+									<li>Developed a dynamic Android application utilizing Java and Firebase as the backend technology stack. The project also incorporated a specialized module integrating machine learning for image recognition, enabling the app to identify and classify different types of mirrors.</li>
+									<li>Led the end-to-end development of the Android application, including designing and implementing the user interface (UI) and user experience (UX) components.</li>
+								</ul>
+							</p>
+						</div>
+						<div class="experience-wrap">
+							<span class="date">Dec 2022 - Mar 2023</span>
+							<h2>SDE Intern (Android) at Monkhood Living now (GharBar)</h2>
+							<p>
+								Monkhood Living now GharBar is a housing platform explicitly designed for bachelors, offering affordable and well-equipped living spaces focusing on essential amenities (BAR: Bed, Almirah, and RO).
+								<ul>
+									<li>During my internship, I had the opportunity to work closely with the Android development team on an innovative application aimed at simplifying the process of finding and renting PG accommodations and flats for college students.</li>
+									<li>Integrated third-party APIs for seamless integration of Google Maps and location services, enhancing the accuracy and convenience of property listings.</li>
+								</ul>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			
+
+			<br>
+			<br>
+
+			<div class="row">
+				<h1 class="big-4">Education</h1>
+				<div class="underline"></div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2021-2025</span>
+						<h2>Bachelor of Engineering</h2>
+						<span class="position">Guru Gobind Singh Indraprastha University</span>
+						<p class="mt-4">CGPA : 8.9</p>
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2019-2021</span>
+						<h2>Higher Secondary School</h2>
+						<span class="position">Dav public school</span>
+						<p class="mt-4">CBSE : 86</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="row justify-content-center mt-5">
+				<div class="col-md-6 text-center ftco-animate">
+					<p><a href="https://drive.google.com/file/d/1IIaC-F5Fh-7KLoT5jW1kiq6eyHYyQoV8/view?usp=drive_link"
+							target="_blank" class="btn btn-primary py-4 px-5">Download CV</a></p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<section class="ftco-section" id="project-section">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-5">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Projects</h1>
+					<h2 class="mb-4">Projects</h2>
+					<p>Below are my Android development projects</p>
+				</div>
+			</div>
+			<div class="row d-flex">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<div class="experience-wrap">
+							<span class="date">-</span>
+							<h2>Eventia - Discover Events</h2>
+							<p>Eventia is your go-to companion for discovering and exploring events near you. Whether it's concerts, festivals, yoga classes, or holiday events, Eventia helps you stay updated on what's happening in your area. With personalized recommendations and easy ticket purchasing.</p>
+							<ul>
+								<li>Google Play Store: <a href="https://play.google.com/store/apps/details?id=com.devinfusion.eventiafinal&amp;hl=en_US&amp;gl=ES" target="_blank">Eventia</a></li>
+								<li>Github: <a href="https://github.com/yashbhardwaj11/Eventia-Build-for-future-" target="_blank">Eventia Repository</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<div class="experience-wrap">
+							<span class="date">-</span>
+							<h2>Status Hive</h2>
+							<p>StatusHive: Your go-to for saving and sharing WhatsApp statuses effortlessly. Download and share videos, images, and stories with ease. Upgrade your status experience today.</p>
+							<ul>
+								<li>Google Play Store: <a href="https://play.google.com/store/apps/details?id=com.devinfusion.statushive&hl=en_US" target="_blank">Status Hive</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<div class="experience-wrap">
+							<span class="date">-</span>
+							<h2>Niceter - Dating app</h2>
+							<p>Niecter is a Dating platform. you can find your perfect match here.</p>
+							<ul>
+								<li>Github: <a href="https://github.com/yashbhardwaj11/Niecter" target="_blank">Niceter Repository</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<div class="experience-wrap">
+							<span class="date">-</span>
+							<h2>Netflix - Ui Clone</h2>
+							<p>This project is complete ui clone of Netflix. It was created with Kotlin. It uses The TheMovieDb Api to search for movies and display details. Feel free to contribute!</p>
+							<ul>
+								<li>Github: <a href="https://github.com/yashbhardwaj11/NetflixClone" target="_blank">Netflix Clone Repository</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<div class="experience-wrap">
+							<span class="date">-</span>
+							<h2>CodeInCommunity - Reddit Clone</h2>
+							<p>CodeIn Community: A Reddit clone built with Firebase, featuring private and public communities, user management, post uploads (text and video), and upvote/comment threads.</p>
+							<ul>
+								<li>Github: <a href="https://github.com/yashbhardwaj11/CodeInCommunity" target="_blank">CodeInCommunity Repository</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+		<div class="container">
+			<!-- <div class="row d-md-flex align-items-center">
+				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+					<div class="block-18">
+						<div class="text">
+							<strong class="number" data-number="20">0</strong>
+							<span>Achievements</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+					<div class="block-18">
+						<div class="text">
+							<strong class="number" data-number="30">0</strong>
+							<span>Projects</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+					<div class="block-18">
+						<div class="text">
+							<strong class="number" data-number="1000">0</strong>
+							<span>Mentored Students</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+					<div class="block-18">
+						<div class="text">
+							<strong class="number" data-number="500">0</strong>
+							<span>Cups of coffee</span>
+						</div>
+					</div>
+				</div>
+			</div> -->
+		</div>
+
+		<div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+			<!-- <div class="container"> -->
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>More projects on<span> Github </span> </h2>
+					<div class="heading">
+						<h4> I love to make user-centric &amp; user-friendly apps </h4>
+						<br>
+						<p><a href="https://github.com/yashbhardwaj11" target="_blank" class="btn btn-primary py-3 px-5">GitHub</a></p>
+					</div>
+				</div>
+			</div>
+			<!-- </div> -->
+		</div>
+	</section>
+
+
+
+	<section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-3">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Contact</h1>
+					<h2 class="mb-4">Contact Me</h2>
+					<p>Below are the details to reach out to me!</p>
+				</div>
+			</div>
+
+			<div class="row d-flex contact-info mb-5">
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-map-signs"></span>
+						</div>
+						<h3 class="mb-4">Address</h3>
+						<p>New Delhi, India</p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-phone2"></span>
+						</div>
+						<h3 class="mb-4">Contact Number</h3>
+						<p><a href="tel://+919555940715">+91 9555-940-715</a></p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-paper-plane"></span>
+						</div>
+						<h3 class="mb-4">Email Address</h3>
+						<p><a href="mailto:>yashbhardwaj.dev@gmail.com">yashbhardwaj.dev@gmail.com</a></p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-globe"></span>
+						</div>
+						<h3 class="mb-4">Download Resume</h3>
+						<p><a href="https://drive.google.com/file/d/1IIaC-F5Fh-7KLoT5jW1kiq6eyHYyQoV8/view?usp=drive_link" target="_blank">Resume</a></p>
+					</div>
+				</div>
+
+				<div class="container">
+					<br>
+					<br>
+					<div class="row justify-content-center">
+						<div class="col-md-7 ftco-animate text-center">
+							<h2>Have a<span> Question? </span> <a href="https://www.linkedin.com/in/yash-bhardwaj-07" target="_blank"
+									class="btn btn-primary py-3 px-5">Click Here</a> </h2>
+						</div>
+					</div>
+					<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+						<li class="ftco-animate"><a href="https://www.linkedin.com/in/yash-bhardwaj-07/"><span
+									class="icon-linkedin"></span></a></li>
+						<li class="ftco-animate"><a href="https://github.com/yashbhardwaj11"><span
+									class="icon-github"></span></a></li>
+					</ul>
+					<br>
+				</div>
+			</div>
+	</section>
+
+
+
+
+	<!-- <footer class="ftco-footer ftco-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer> -->
+
+
+	<!-- loader -->
+	<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+			<circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+			<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+				stroke="#F96D00" />
+		</svg></div>
+
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-migrate-3.0.1.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="js/jquery.stellar.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/aos.js"></script>
+	<script src="js/jquery.animateNumber.min.js"></script>
+	<script src="js/scrollax.min.js"></script>
+
+	<script src="js/main.js"></script>
+
+</body>
+
+</html>

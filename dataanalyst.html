@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Yash Bhardwaj</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<link rel="stylesheet" href="css/aos.css">
+
+	<link rel="stylesheet" href="css/ionicons.min.css">
+
+	<link rel="stylesheet" href="css/flaticon.css">
+	<link rel="stylesheet" href="css/icomoon.css">
+	<link rel="stylesheet" href="css/style.css">
+
+
+
+	<style>
+		/*======================================
+//--//-->   ABOUT
+======================================*/
+
+		.about-mf .box-shadow-full {
+			padding-top: 4rem;
+			padding-bottom: 4rem;
+		}
+
+		.about-mf .about-img {
+			margin-bottom: 2rem;
+		}
+
+		.about-mf .about-img img {
+			margin-left: 10px;
+		}
+
+
+		.skill-mf .progress {
+			/* background-color: #cde1f8; */
+			margin: .5rem 0 1.2rem 0;
+			border-radius: 0;
+			height: .7rem;
+		}
+
+		.skill-mf .progress .progress-bar {
+			height: .7rem;
+			background-color: #ffbd39;
+		}
+
+
+		/* Animation styles */
+		#typing-animation {
+			position: relative;
+			font-size: 30px;
+			font-weight: bold;
+			color: rgb(255, 255, 255);
+			overflow: hidden;
+			white-space: nowrap;
+			animation: typing 3s steps(20, end) infinite;
+		}
+
+		#typing-animation:before {
+			content: "";
+			/* position: absolute; */
+			top: 0;
+			left: 0;
+			width: 0;
+			height: 100%;
+			background-color: #ccc;
+			animation: typing-cursor 0.5s ease-in-out infinite;
+		}
+
+		@keyframes typing {
+			from {
+				width: 0;
+			}
+
+			to {
+				width: 100%;
+			}
+		}
+
+		@keyframes typing-cursor {
+			from {
+				width: 5px;
+			}
+
+			to {
+				width: 0;
+			}
+		}
+
+
+		/* project image zoom effect */
+
+		.zoom-effect {
+			overflow: hidden;
+			transition: transform 0.3s ease-out;
+		}
+
+		.zoom-effect:hover {
+			transform: scale(1.1);
+		}
+	</style>
+
+
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+
+	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+		<div class="container">
+			<a class="navbar-brand" href="index.html">Yash Bhardwaj</a>
+			<button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse"
+				data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="oi oi-menu"></span> Menu
+			</button>
+
+			<div class="collapse navbar-collapse" id="ftco-nav">
+				<ul class="navbar-nav nav ml-auto">
+					<li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+					<li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+					<li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+					<li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+					<li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<section id="home-section" class="hero">
+		<div class="home-slider  owl-carousel">
+			<div class="slider-item ">
+				<div class="overlay"></div>
+				<div class="container">
+					<div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end"
+						data-scrollax-parent="true">
+						<div class="one-third js-fullheight order-md-last img"
+							style="background-image:url(images/yashnobg.png);">
+							<div class="overlay"></div>
+						</div>
+						<div class="one-forth d-flex  align-items-center ftco-animate"
+							data-scrollax=" properties: { translateY: '70%' }">
+							<div class="text">
+								<span class="subheading">Hello!</span>
+								<h1 class="mb-4 mt-3">I'm <span>Yash Bhardwaj</span></h1>
+
+								<!-- Element to contain animated typing -->
+								<span id="typing-animation"></span>
+
+								<script>
+
+									// Initialize the typing animation
+									const typingAnimationElement = document.getElementById('typing-animation');
+
+									// Create an array of typing text
+									const typingTexts = [
+										'Android Developer     ',
+										'Full stack Developer  ',
+										'Data Analyst          ',
+									];
+
+									// Create a function to display the typing animation for a given text
+									function playTypingAnimation(text) {
+										// Loop through each character and add it to the element
+										for (let i = 0; i < text.length; i++) {
+											setTimeout(() => {
+												typingAnimationElement.textContent += text[i];
+											}, i * 200); // Increase the delay to slow down the typing animation
+										}
+
+										// Once the animation is complete, reset the text and start over
+										setTimeout(() => {
+											typingAnimationElement.textContent = '';
+											playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+										}, text.length * 200);
+									}
+
+									// Start the typing animation loop
+									playTypingAnimation(typingTexts[0]);
+
+								</script>
+
+								<br>
+								<br>
+								<!-- <h2>Android Developer</h2> -->
+								<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+								<!-- <br> -->
+								<p><a href="https://github.com/yashbhardwaj11/"
+										class="btn btn-primary py-3 px-4">Github</a>
+									<a href="https://linkedin.com/in/yash-bhardwaj-07"
+										class="btn btn-white btn-outline-white py-3 px-4">Linkedin</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+		<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+					<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+										<div class="about-img">
+											<img src="images/about.jpg" class="img-fluid rounded b-shadow-a" alt="">
+										</div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+										<div class="about-info">
+											<p><span class="title-s">Name: </span> <span>Yash Bhardwaj</span></p>
+											<p><span class="title-s">Job Role: </span> <span>Data Analyst</span>
+											</p>
+											<p><span class="title-s">Experience: </span> <span>5 Months</span>
+											</p>
+											<p><span class="title-s">Address: </span> <span>New Delhi, India</span></p>
+										</div>
+									</div>
+								</div>
+
+								<div class="skill-mf">
+									<p class="title-s">Skills</p>
+									<span>Programming Languages : </span>
+									<span class="pull-right">C++ || Javascript || Python || Java || numpy || pandas ||
+										Matplotlib || seaborn</span>
+
+									<p class="title-s"></p>
+									<span>Visualization tools : </span>
+									<span class="pull-right">Power BI, Tableau, Advance Excel for creating visual
+										reports</span>
+
+									<p class="title-s"></p>
+									<span>Data Analyst Tools : </span>
+									<span class="pull-right">Excel, SQL, Python, numpy, pandas, Matplotlib,
+										pyplot</span>
+
+									<p class="title-s"></p>
+									<span>Other Skills : </span>
+									<span class="pull-right">Report and Dashboard Design, Data Management, Business
+										Analytics, Basic knowledge of Alteryx, Strong Object-Oriented Programming
+										Skills</span>
+								</div>
+
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+
+								<p>Greetings! I'm Yash Bhardwaj, a dedicated data analyst hailing from the bustling city
+									of New Delhi, India. My passion lies in the intricate world of data, where I excel
+									at unraveling its mysteries to extract valuable insights.
+								</p>
+								<p>With a robust skill set encompassing Excel, SQL, Python, and advanced visualization
+									tools such as Power BI, I possess a knack for transforming raw data into compelling
+									narratives. Whether it's cleaning messy datasets, conducting in-depth analyses, or
+									crafting visually stunning dashboards, I thrive on every aspect of the data journey.
+								</p>
+								<p>Having honed my craft through hands-on experience and academic rigor, I bring a blend
+									of technical expertise and creative problem-solving to the table. My goal? To
+									empower organizations with the knowledge they need to make informed decisions and
+									drive strategic growth.</p>
+								<p>Beyond my professional pursuits, I'm a lifelong learner with an insatiable curiosity
+									for all things data-related. I'm constantly seeking new challenges and opportunities
+									to expand my skill set and stay at the forefront of industry trends.</p>
+								<p>If you're on the lookout for a passionate data enthusiast who can elevate your
+									analytics game, look no further! Let's collaborate and embark on a data-driven
+									journey together.</p>
+							</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<span class="number" data-number="15">0</span> <span>+</span>
+									<span>&nbsp; Projects completed</span>
+								</p>
+								<p><a href="https://www.linkedin.com/in/yash-bhardwaj-07/" target="_blank"
+										class="btn btn-primary py-3 px-3">LinkedIn</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+
+	<section class="ftco-section ftco-no-pb" id="resume-section">
+		<div class="container">
+			<div class="row justify-content-center pb-5">
+				<div class="col-md-10 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Resume</h1>
+					<h2 class="mb-4">Resume</h2>
+					<p>Hello! I'm a skilled data analyst proficient in Excel, SQL, Python, and visualization tools like
+						Power BI. From cleaning messy datasets to crafting insightful reports, I'm passionate about
+						transforming data into actionable insights. Let's work together to unlock the potential of your
+						data!
+
+					</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<h1 class="big-4">Experience</h1>
+				<div class="underline"></div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-12">
+					<div class="resume-wrap ftco-animate">
+						<div class="experience-wrap">
+							<span class="date">10/2023 - 01/2024</span>
+							<h2>Data Analyst Intern at Bharat Intern, New Delhi</h2>
+							<p>
+								Applied sophisticated statistical techniques to identify and rectify missing data
+								points, improving dataset completeness by 30% and enabling more reliable and robust
+								data-driven decision-making.
+								Identified, analyzed, and managed missing data points, applying statistical techniques
+								to fill in gaps and enhance dataset integrity.
+								Created detailed and interactive visualizations using Power BI to present data trends
+								and insights effectively.
+							</p>
+						</div>
+						<div class="experience-wrap">
+							<span class="date">02/2024 - 05/2024</span>
+							<h2>Data Analyst Intern at CodeSoft, New Delhi</h2>
+							<p>
+								Conducted extensive data cleaning and preprocessing, ensuring data quality and
+								consistency.
+								Identified and handled null values by employing statistical methods to impute missing
+								data.
+								Developed and maintained interactive and insightful dashboards using Power BI to
+								facilitate data-driven decision-making.
+								Collaborated with various departments to understand data needs and deliver tailored
+								analytical solutions.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<br>
+			<br>
+
+			<div class="row">
+				<h1 class="big-4">Education</h1>
+				<div class="underline"></div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2021-2025</span>
+						<h2>Bachelor of Engineering</h2>
+						<span class="position">Guru Gobind Singh Indraprastha University</span>
+						<p class="mt-4">CGPA : 8.9</p>
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2019-2021</span>
+						<h2>Higher Secondary School</h2>
+						<span class="position">Dav public school</span>
+						<p class="mt-4">CBSE : 86</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="row justify-content-center mt-5">
+				<div class="col-md-6 text-center ftco-animate">
+					<p><a href="https://drive.google.com/file/d/1IIaC-F5Fh-7KLoT5jW1kiq6eyHYyQoV8/view?usp=drive_link"
+							target="_blank" class="btn btn-primary py-4 px-5">Download CV</a></p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<section class="ftco-section ftco-no-pb" id="resume-section">
+		<div class="container">
+
+			<div class="row">
+				<h1 class="big-4">Projects</h1>
+				<div class="underline"></div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-12">
+					<div class="resume-wrap ftco-animate">
+						<div class="container">
+							<!-- Cafe Data Analysis Project -->
+							<div class="row">
+								<div class="col-md-12">
+									<div class="resume-wrap ftco-animate">
+										<div class="experience-wrap">
+											<span class="date">Cafe Data Analysis Project</span>
+											<h2>Tools Used: Excel, Python (Pandas, Matplotlib)</h2>
+											<p>
+												Data Source: Acquired dataset from Kaggle, containing various metrics
+												related to a cafe's sales, customer demographics, and product
+												preferences.
+												Data Analysis: Utilized Excel and Python (Pandas) to conduct thorough
+												data analysis, identifying key trends and patterns in sales, customer
+												behavior, and product performance.
+												Visualization: Created comprehensive visualizations using Excel and
+												Matplotlib to present findings clearly and effectively.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Virat Kohli Professional Career Stats Analysis -->
+							<div class="row">
+								<div class="col-md-12">
+									<div class="resume-wrap ftco-animate">
+										<div class="experience-wrap">
+											<span class="date">Virat Kohli Professional Career Stats Analysis</span>
+											<h2>Tools Used: Power BI, DAX, Power Query Editor</h2>
+											<p>
+												Data Cleaning and Transformation: Employed Power Query Editor to clean,
+												transform, and prepare the data for detailed analysis.
+												Data Analysis: Used Power BI to analyze key performance metrics such as
+												runs scored, average, strike rate, and match-winning contributions.
+												Visualization: Created dynamic and interactive dashboards to illustrate
+												career highlights, performance trends over time, and comparisons across
+												different formats (Test, ODI, T20).
+												Insights: Analyzed the data to identify strengths, areas for
+												improvement, and patterns that contributed to his success.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+
+
+
+
+	<br><br><br>
+
+	<div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+		<!-- <div class="container"> -->
+		<div class="row justify-content-center">
+			<div class="col-md-7 ftco-animate text-center">
+				<h2>More projects on<span> Github </span> </h2>
+				<div class="heading">
+					<h4> I love to make user-centric &amp; user-friendly apps </h4>
+					<br>
+					<p><a href="https://github.com/yashbhardwaj11" target="_blank"
+							class="btn btn-primary py-3 px-5">GitHub</a></p>
+				</div>
+			</div>
+		</div>
+		<!-- </div> -->
+	</div>
+	</section>
+
+
+
+	<section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-3">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Contact</h1>
+					<h2 class="mb-4">Contact Me</h2>
+					<p>Below are the details to reach out to me!</p>
+				</div>
+			</div>
+
+			<div class="row d-flex contact-info mb-5">
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-map-signs"></span>
+						</div>
+						<h3 class="mb-4">Address</h3>
+						<p>New Delhi, India</p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-phone2"></span>
+						</div>
+						<h3 class="mb-4">Contact Number</h3>
+						<p><a href="tel://+919555940715">+91 9555-940-715</a></p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-paper-plane"></span>
+						</div>
+						<h3 class="mb-4">Email Address</h3>
+						<p><a href="mailto:>yashbhardwaj.dev@gmail.com">yashbhardwaj.dev@gmail.com</a></p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-globe"></span>
+						</div>
+						<h3 class="mb-4">Download Resume</h3>
+						<p><a href="https://drive.google.com/file/d/1IIaC-F5Fh-7KLoT5jW1kiq6eyHYyQoV8/view?usp=drive_link"
+								target="_blank">Resume</a></p>
+					</div>
+				</div>
+
+				<div class="container">
+					<br>
+					<br>
+					<div class="row justify-content-center">
+						<div class="col-md-7 ftco-animate text-center">
+							<h2>Have a<span> Question? </span> <a href="https://www.linkedin.com/in/yash-bhardwaj-07"
+									target="_blank" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
+						</div>
+					</div>
+					<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+						<li class="ftco-animate"><a href="https://www.linkedin.com/in/yash-bhardwaj-07/"><span
+									class="icon-linkedin"></span></a></li>
+						<li class="ftco-animate"><a href="https://github.com/yashbhardwaj11"><span
+									class="icon-github"></span></a></li>
+					</ul>
+					<br>
+				</div>
+			</div>
+	</section>
+
+
+
+
+	<!-- <footer class="ftco-footer ftco-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer> -->
+
+
+	<!-- loader -->
+	<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+			<circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+			<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+				stroke="#F96D00" />
+		</svg></div>
+
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-migrate-3.0.1.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="js/jquery.stellar.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/aos.js"></script>
+	<script src="js/jquery.animateNumber.min.js"></script>
+	<script src="js/scrollax.min.js"></script>
+
+	<script src="js/main.js"></script>
+
+</body>
+
+</html>
